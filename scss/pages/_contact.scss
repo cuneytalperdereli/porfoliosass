@@ -1,0 +1,36 @@
+
+
+.contact-bgImg-container{
+    @include bgimg(100vh,"../../img/model-1.jpg");
+
+    nav{
+        height: 40vh;
+    }
+}
+.contact{
+    // border: 2px solid red;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    h2{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__list{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2.5rem;
+        font-size: 1.5rem;
+        flex-wrap: wrap;
+    }
+    .text-secondary{
+        color: $secondary-color;
+    }
+}

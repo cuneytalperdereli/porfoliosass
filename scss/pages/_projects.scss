@@ -1,0 +1,55 @@
+
+.project-bgImg-container{
+    // border: 2px solid red;
+    @include bgimg(50vh,"../../img/model-1.jpg");
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .projects__bio-image{
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.projects{
+      &__items{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2rem 5rem;
+        gap: 1rem;
+       
+
+
+      }
+      &__item{
+        width: 100%;
+        cursor: pointer;
+        border-bottom: 5px solid $secondary-color;
+        position: relative;
+        width: 35%;
+
+        
+     
+        img{
+            width: 100%;
+        }
+        &:hover::after{
+            
+            opacity: 0.5;
+        }
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: $secondary-color;
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            transition: all 1s;
+        }
+      }
+
+}
